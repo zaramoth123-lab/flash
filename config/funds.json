@@ -1,0 +1,67 @@
+{
+  "funds": [
+    {
+      "name": "Day One 2050 Fund",
+      "ticker": "",
+      "allocation": 12,
+      "strategicRole": "Diversified glide path anchor; trimmed for flexibility",
+      "url": ""
+    },
+    {
+      "name": "Vanguard Russell 3000 Index I",
+      "ticker": "VRTTX",
+      "allocation": 30,
+      "strategicRole": "Core U.S. equity; includes mega-cap tech",
+      "url": "https://www.marketwatch.com/investing/fund/vrttx"
+    },
+    {
+      "name": "Large Cap Growth / JP Morgan Invst Mgmt K",
+      "ticker": "",
+      "allocation": 5,
+      "strategicRole": "Active large-cap growth; tech tilt",
+      "url": ""
+    },
+    {
+      "name": "iShares MSCI Total International Index K",
+      "ticker": "",
+      "allocation": 14,
+      "strategicRole": "Global diversification; EM tech hubs",
+      "url": ""
+    },
+    {
+      "name": "iShares Russell Mid-Cap Index K",
+      "ticker": "",
+      "allocation": 6,
+      "strategicRole": "Mid-cap exposure; rising tech disruptors",
+      "url": ""
+    },
+    {
+      "name": "JPMorgan Small Cap Value R6",
+      "ticker": "JSVUX",
+      "allocation": 8,
+      "strategicRole": "Value tilt; balances growth-heavy small caps",
+      "url": "https://www.marketwatch.com/investing/fund/jgsmx"
+    },
+    {
+      "name": "PGIM Jennison Small Company R6",
+      "ticker": "",
+      "allocation": 12,
+      "strategicRole": "Small-cap growth; strong AI/cloud exposure",
+      "url": ""
+    },
+    {
+      "name": "PIMCO Total Return Instl",
+      "ticker": "",
+      "allocation": 10,
+      "strategicRole": "Active bond sleeve; flexible duration and credit",
+      "url": ""
+    },
+    {
+      "name": "Prudential Stable Value Fund",
+      "ticker": "",
+      "allocation": 3,
+      "strategicRole": "Liquidity buffer; volatility hedge",
+      "url": ""
+    }
+  ]
+}
