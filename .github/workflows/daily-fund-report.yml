@@ -1,0 +1,42 @@
+name: Daily Fund Performance Report
+
+on:
+  schedule:
+    # Run daily at 8 AM EST (1 PM UTC)
+    - cron: '0 13 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run fund tracker
+        run: npm start
+      
+      - name: Upload report as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: fund-performance-report
+          path: reports/*.csv
+          retention-days: 90
+      
+      - name: Commit and push report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add reports/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Daily fund performance report - $(date +%Y-%m-%d)" && git push)
+        continue-on-error: true
